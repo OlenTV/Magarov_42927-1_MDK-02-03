@@ -19,13 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="A.h" />
-    <ClInclude Include="B.h" />
+    <ClCompile Include="core\EquationInterface.cpp" />
+    <ClCompile Include="core\logAbstract.cpp" />
+    <ClCompile Include="core\logInterface.cpp" />
+    <ClCompile Include="Magarov\LinEquation.cpp" />
+    <ClCompile Include="Magarov\MyLog.cpp" />
+    <ClCompile Include="Magarov\QuadEquation.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="A.cpp" />
-    <ClCompile Include="B.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClInclude Include="Magarov\LinEquation.h" />
+    <ClInclude Include="Magarov\MagarovException.h" />
+    <ClInclude Include="Magarov\MyLog.h" />
+    <ClInclude Include="Magarov\QuadEquation.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -1,66 +1,40 @@
 #pragma once
-#define OUT //сапюрэ йнллемрюпхи б мювюке ярпнйх дкъ бшбндю йнпмеи спюбмемхи
-#include "B.h"
+#include "Magarov/QuadEquation.h"
+using namespace Magarov;
 
-void main()
+int main()
 {
-    A tmpA1(0.0f, 1.0f);
-    A tmpA2(1.0f, 1.0f);
-    B tmpB1(1.0f, -2.0f, -3.0f);
-    B tmpB2(1.0f, 12.0f, 36.0f);
-    B tmpB3(5.0f, 4.0f, 1.0f);
+    float A, B, C;
+    A = B = C = 0;
+    cout << "Enter A B C" << endl;
+    cin >> A >> B >> C;
+    mylog.log(to_string(A) + "x^2 + " + to_string(B) + "x + " + to_string(C) + " = 0");
 
-#ifdef OUT
-    cout << "---A1------" << endl;
-    if (tmpA1.getX().IsErr == false)
+    try
     {
-        cout << tmpA1.getX().res1 << endl;
+        if (A != 0)
+        {
+            mylog.log("Quadratic equation");
+        }
+        else
+        {
+            mylog.log("Linear equation");
+        }
+        QuadEquation* equ = new QuadEquation();
+        vector <float> *results = equ->solve(A, B, C);
+        string str = "Roots: ";
+        for (auto const& s: *results)
+        {
+            str += to_string(s) + " ";
+        }
+        mylog.log(str);
     }
-    else
+    catch (MagarovException& exception)
     {
-        cout << "ERROR!" << endl;
+        cout << exception.getText();
     }
+    mylog.write();
+    mylog.clear();
 
-    cout << "---A2------" << endl;
-    if (tmpA2.getX().IsErr == false)
-    {
-        cout << tmpA2.getX().res1 << endl;
-    }
-    else
-    {
-        cout << "ERROR!" << endl;
-    }
-
-    cout << "---B1------" << endl;
-    if (tmpB1.getX().IsErr == false)
-    {
-        cout << tmpB1.getX().res1 << " " << tmpB1.getX().res2 << endl;
-    }
-    else
-    {
-        cout << "ERROR!" << endl;
-    }
-
-    cout << "---B2------" << endl;
-    if (tmpB2.getX().IsErr == false)
-    {
-        cout << tmpB2.getX().res1 << " " << tmpB2.getX().res2 << endl;
-    }
-    else
-    {
-        cout << "ERROR!" << endl;
-    }
-
-    cout << "---B3------" << endl;
-    if (tmpB3.getX().IsErr == false)
-    {
-        cout << tmpB3.getX().res1 << " " << tmpB3.getX().res2 << endl;
-    }
-    else
-    {
-        cout << "ERROR!" << endl;
-    }
-#endif
-
-    return;
+    return NULL;
 }

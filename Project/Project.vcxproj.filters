@@ -5,32 +5,54 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Файлы заголовков">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Исходные файлы\core">
+      <UniqueIdentifier>{229475e4-f574-4e88-9266-c0147361a6c9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы ресурсов">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Исходные файлы\Magarov">
+      <UniqueIdentifier>{676f6134-b5da-459d-b681-4303debab46b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Magarov\Headers">
+      <UniqueIdentifier>{74522c94-7e8a-4872-b448-4df38cc2951c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Magarov\SRCs">
+      <UniqueIdentifier>{9136863f-8faa-41fe-b45e-08722b33f952}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="A.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="B.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="A.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="B.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Source.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="core\logInterface.cpp">
+      <Filter>Исходные файлы\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\logAbstract.cpp">
+      <Filter>Исходные файлы\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\EquationInterface.cpp">
+      <Filter>Исходные файлы\core</Filter>
+    </ClCompile>
+    <ClCompile Include="Magarov\MyLog.cpp">
+      <Filter>Исходные файлы\Magarov\SRCs</Filter>
+    </ClCompile>
+    <ClCompile Include="Magarov\QuadEquation.cpp">
+      <Filter>Исходные файлы\Magarov\SRCs</Filter>
+    </ClCompile>
+    <ClCompile Include="Magarov\LinEquation.cpp">
+      <Filter>Исходные файлы\Magarov\SRCs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Magarov\MagarovException.h">
+      <Filter>Исходные файлы\Magarov\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Magarov\MyLog.h">
+      <Filter>Исходные файлы\Magarov\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Magarov\QuadEquation.h">
+      <Filter>Исходные файлы\Magarov\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Magarov\LinEquation.h">
+      <Filter>Исходные файлы\Magarov\Headers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
