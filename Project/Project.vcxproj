@@ -21,12 +21,10 @@
   <ItemGroup>
     <ClInclude Include="A.h" />
     <ClInclude Include="B.h" />
-    <ClInclude Include="C.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="A.cpp" />
     <ClCompile Include="B.cpp" />
-    <ClCompile Include="C.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
