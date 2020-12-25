@@ -1,4 +1,7 @@
 #pragma once
+#include <fstream>
+#include <direct.h>
+#include <Windows.h>
 
 #include "../core/logAbstract.cpp"
 #include "../core/logInterface.cpp"
@@ -19,7 +22,8 @@ namespace Magarov
             return qq;
         }
     private:
-        MyLog() {};
+        MyLog();
+        string path;
     };
 
 #define mylog MyLog::getInstance()

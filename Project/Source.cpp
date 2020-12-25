@@ -4,6 +4,13 @@ using namespace Magarov;
 
 int main()
 {
+    ifstream verfile;
+    verfile.open("..\\version", fstream::in);
+    string ver;
+    verfile >> ver;
+    mylog.log("Program version is " + ver);
+    verfile.close();
+
     float A, B, C;
     A = B = C = 0;
     cout << "Enter A B C" << endl;

@@ -11,10 +11,11 @@ namespace Magarov
         MagarovException(const string& _Message) :runtime_error(_Message)
         {
             msg = _Message;
+            mylog.log(msg);
         };
         const string getText()
         {
-            return msg+"\n\r";
+            return msg + "\n\r";
         };
     private:
         string msg;
