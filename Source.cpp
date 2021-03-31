@@ -43,5 +43,6 @@ int main()
     mylog.write();
     mylog.clear();
 
+    system("pause");
     return NULL;
 }
